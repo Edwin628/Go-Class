@@ -9,16 +9,16 @@ Go-Class 是一个使用 Go 语言开发的多人视频聊天应用，支持通�
 ## 目录结构
 
 ```
-streaming-app/
+go-class/
 │
 ├── cmd/
-│   └── main.go               # 主程序入口
+│   └── main.go               # 主程序入口，初始化路由和信令服务
 ├── api/
 │   ├── auth.go               # 用户认证逻辑
 │   ├── rooms.go              # 房间管理 API
 │   └── recordings.go         # 录播管理
 ├── sfu/
-│   ├── sfu.go                # SFU 初始化
+│   ├── sfu.go                # SFU 初始化，处理 WebRTC 信令
 │   └── recorder.go           # 录播处理
 ├── config/
 │   └── config.go             # 项目配置
@@ -26,6 +26,7 @@ streaming-app/
 │   └── user.go               # 用户模型与数据库交互
 ├── go.mod                    # Go 模块文件
 └── README.md                 # 项目文档
+
 ```
 
 ## 功能概述
