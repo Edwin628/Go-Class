@@ -15,7 +15,7 @@ func CreateRoom(c *gin.Context) {
 		return
 	}
 
-	if err := models.CreateRoom(room); err != nil {
+	if _, err := models.CreateRoom("room", "host"); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
